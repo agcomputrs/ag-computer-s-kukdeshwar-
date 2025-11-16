@@ -1,66 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AG Computer's Kukdeshwar</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>AG Computer's Kukdeshwar</h1>
-        <p>Forest Officer ke Samne, Main Road Kukdeshwar</p>
-        <p>Mobile: 9516596980</p>
-    </header>
+<section class="appointment">
+    <h2>Appointment Book करें</h2>
 
-    <section class="services">
-        <h2>हमारी सेवाएं</h2>
-        <ul>
-            <li>सभी प्रकार के ऑनलाइन फॉर्म बनाए एवं भरे जाते हैं</li>
-            <li>जाति, आय, मूल निवासी प्रमाण पत्र</li>
-            <li>संभल कार्ड, ई-श्रम कार्ड</li>
-            <li>पैन कार्ड एवं खोया हुआ पैन कार्ड</li>
-            <li>ड्राइविंग लाइसेंस, रिन्यूअल, RC प्रिंट</li>
-            <li>आयुष्मान कार्ड बनाये जाते हैं</li>
-            <li>एयरटेल पेमेंट बैंक में खाता खोला जाता है</li>
-            <li>बिजली बिल की फाइल मिलती है</li>
-            <li>पासपोर्ट साइज फोटो, समग्र ID कार्ड</li>
-        </ul>
-    </section>
+    <form id="appointmentForm">
+        <input type="text" id="aname" placeholder="आपका नाम" required>
+        <input type="text" id="amobile" placeholder="मोबाइल नंबर" required>
+        <input type="date" id="adate" required>
+        <input type="time" id="atime" required>
+        <textarea id="areason" placeholder="Appointment किस लिए है?" required></textarea>
 
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <p>Yahan aapki dukan ki photos add ki jaa sakti hain.</p>
-    </section>
+        <button type="submit">Book Appointment</button>
+    </form>
+</section>
 
-    <section class="contact">
-        <h2>Contact Form</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="text" id="mobile" placeholder="Your Mobile Number" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+<script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(e){
+        e.preventDefault();
 
-    <a href="https://wa.me/9516596980" class="whatsapp">WhatsApp Chat</a>
+        var name = document.getElementById("aname").value;
+        var mobile = document.getElementById("amobile").value;
+        var date = document.getElementById("adate").value;
+        var time = document.getElementById("atime").value;
+        var reason = document.getElementById("areason").value;
 
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(e){
-            e.preventDefault();
+        var message =
+            "📌 *New Appointment Request* %0a%0a" +
+            "👤 Name: " + name + "%0a" +
+            "📞 Mobile: " + mobile + "%0a" +
+            "📅 Date: " + date + "%0a" +
+            "⏰ Time: " + time + "%0a" +
+            "📝 Reason: " + reason;
 
-            var name = document.getElementById("name").value;
-            var mobile = document.getElementById("mobile").value;
-            var message = document.getElementById("message").value;
-
-            var whatsappMessage = 
-                "Name: " + name + "%0a" +
-                "Mobile: " + mobile + "%0a" +
-                "Message: " + message;
-
-            window.open("https://wa.me/9516596980?text=" + whatsappMessage, "_blank");
-        });
-    </script>
-
-</body>
-</html>
+        window.open("https://wa.me/9516596980?text=" + message, "_blank");
+    });
+</script>
