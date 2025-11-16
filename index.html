@@ -4,140 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AG Computer's Kukdeshwar</title>
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
             margin: 0;
             padding: 0;
-        }
-        header {
-            background: #0066cc;
-            color: white;
-            text-align: center;
-            padding: 18px;
-        }
-        section {
-            background: white;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #0066cc;
-        }
-        ul li {
-            margin-bottom: 6px;
-            font-size: 17px;
-        }
-        .contact form, .appointment form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        input, textarea, select {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #888;
-            border-radius: 5px;
-        }
-        button {
-            padding: 12px;
-            font-size: 17px;
-            background: #0066cc;
-            color: white;
-            border: none;
-            border-radius: 5px;
+            font-family: Arial;
+            background: #eef3f8;
         }
 
-        .whatsapp {
+        header {
+            background: linear-gradient(135deg, #0056d6, #007bff);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 0 0 25px 25px;
+            box-shadow: 0px 4px 10px #00000045;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        header p {
+            margin: 5px;
+            font-size: 17px;
+        }
+
+        .section {
+            background: white;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 12px #00000025;
+        }
+
+        h2 {
+            color: #0056d6;
+            border-left: 5px solid #0056d6;
+            padding-left: 10px;
+            font-size: 22px;
+        }
+
+        ul li {
+            margin: 10px 0;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li .material-icons {
+            font-size: 20px;
+            color: #0056d6;
+            margin-right: 8px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            color: white;
+            background: #0056d6;
+            border: none;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background: #0043aa;
+        }
+
+        .whatsapp-float {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #25d366;
-            color: white;
-            padding: 12px 18px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
+            background: #25D366;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px #00000050;
         }
+
+        .whatsapp-float img {
+            width: 35px;
+        }
+
     </style>
 </head>
 <body>
 
     <header>
         <h1>AG Computer's Kukdeshwar</h1>
-        <p>Forest Officer ke Samne, Main Road Kukdeshwar</p>
-        <p>Mobile: 9516596980</p>
+        <p><b>स्थान:</b> Forest Officer के सामने, Main Road Kukdeshwar</p>
+        <p><b>मोबाइल:</b> 9516596980</p>
     </header>
 
-    <section class="services">
+    <!-- Services -->
+    <div class="section">
         <h2>हमारी सेवाएं</h2>
         <ul>
-            <li>सभी प्रकार के ऑनलाइन फॉर्म बनाए एवं भरे जाते हैं</li>
-            <li>जाति, आय, मूल निवासी प्रमाण पत्र</li>
-            <li>संभल कार्ड, ई-श्रम कार्ड</li>
-            <li>पैन कार्ड एवं खोया हुआ पैन कार्ड</li>
-            <li>ड्राइविंग लाइसेंस, रिन्यूअल, RC प्रिंट</li>
-            <li>आयुष्मान कार्ड बनाये जाते हैं</li>
-            <li>एयरटेल पेमेंट बैंक में खाता खोला जाता है</li>
-            <li>बिजली बिल की फाइल मिलती है</li>
-            <li>पासपोर्ट साइज फोटो, समग्र ID कार्ड</li>
+            <li><span class="material-icons">task</span>सभी प्रकार के ऑनलाइन फ़ॉर्म बनाए एवं भरे जाते हैं</li>
+            <li><span class="material-icons">badge</span>जाति, आय, मूल निवासी प्रमाण पत्र</li>
+            <li><span class="material-icons">smart_card</span>संभल कार्ड, ई-श्रम कार्ड</li>
+            <li><span class="material-icons">fingerprint</span>पैन कार्ड एवं खोया हुआ पैन कार्ड</li>
+            <li><span class="material-icons">directions_car</span>ड्राइविंग लाइसेंस, रिन्यूअल, RC प्रिंट</li>
+            <li><span class="material-icons">health_and_safety</span>आयुष्मान कार्ड</li>
+            <li><span class="material-icons">account_balance</span>एयरटेल पेमेंट बैंक खाता</li>
+            <li><span class="material-icons">bolt</span>बिजली बिल की फाइल</li>
+            <li><span class="material-icons">photo</span>पासपोर्ट साइज फोटो, समग्र ID कार्ड</li>
         </ul>
-    </section>
+    </div>
 
-    <section class="appointment">
+    <!-- Appointment -->
+    <div class="section">
         <h2>Appointment Book करें</h2>
+
         <form onsubmit="sendWhatsApp(); return false;">
-            <input id="name" type="text" placeholder="आपका नाम" required>
-            <input id="mobile" type="text" placeholder="मोबाइल नंबर" required>
+            <input id="name" placeholder="आपका नाम" required>
+            <input id="mobile" placeholder="मोबाइल नंबर" required>
+            
             <select id="service" required>
                 <option value="">सेवा चुनें</option>
                 <option>Online Form</option>
-                <option>Caste/Income/Resident Certificate</option>
+                <option>Caste / Income Certificate</option>
                 <option>Samagra / E-Shram Card</option>
                 <option>PAN Card</option>
                 <option>Driving License</option>
                 <option>Aayushman Card</option>
                 <option>Airtel Payment Bank</option>
                 <option>Electricity Bill</option>
-                <option>Passport Size Photo</option>
+                <option>Passport Photo / Samagra ID</option>
             </select>
-            <input id="date" type="date" required>
-            <textarea id="msg" placeholder="Message (optional)"></textarea>
+
+            <input type="date" id="date" required>
+            <textarea id="msg" placeholder="Message (Optional)"></textarea>
+
             <button type="submit">Book Appointment</button>
         </form>
-    </section>
+    </div>
 
-    <a href="https://wa.me/9516596980" class="whatsapp">WhatsApp</a>
+    <!-- WhatsApp Floating Button -->
+    <a class="whatsapp-float" href="https://wa.me/9516596980" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png">
+    </a>
 
-    <script>
-        function sendWhatsApp() {
-            let name = document.getElementById("name").value;
-            let mobile = document.getElementById("mobile").value;
-            let service = document.getElementById("service").value;
-            let date = document.getElementById("date").value;
-            let msg = document.getElementById("msg").value;
+<script>
+function sendWhatsApp() {
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let service = document.getElementById("service").value;
+    let date = document.getElementById("date").value;
+    let msg = document.getElementById("msg").value;
 
-            let text = `New Appointment Request:%0A
-Name: ${name}%0A
-Mobile: ${mobile}%0A
-Service: ${service}%0A
-Date: ${date}%0A
-Message: ${msg}`;
+    let text =
+        `📌 *New Appointment Request* %0A
+        👤 Name: ${name}%0A
+        📞 Mobile: ${mobile}%0A
+        🛠 Service: ${service}%0A
+        📅 Date: ${date}%0A
+        📝 Message: ${msg}`;
 
-            window.open(`https://wa.me/9516596980?text=${text}`, "_blank");
-        }
-    </script>
-
-</body>
-</html>            "📅 Date: " + date + "%0a" +
-            "⏰ Time: " + time + "%0a" +
-            "📝 Reason: " + reason;
-
-        window.open("https://wa.me/9516596980?text=" + message, "_blank");
-    });
+    window.open(`https://wa.me/9516596980?text=${text}`, "_blank");
+}
 </script>
 
+</body>
+</html>
 </body>
 </html>
