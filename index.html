@@ -183,3 +183,21 @@ function sendWhatsApp() {
 
 </body>
 </html>
+
+<section class="vacancy">
+    <h2>हमारी वर्तमान Vacancies</h2>
+    <div id="vacancy-list">Loading vacancies...</div>
+</section>
+
+<script>
+    fetch("vacancy.txt")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("vacancy-list").innerHTML = 
+                data.replace(/\n/g, "<br>");
+        })
+        .catch(error => {
+            document.getElementById("vacancy-list").innerHTML = 
+                "Vacancy data load nahi ho payi.";
+        });
+</script>
